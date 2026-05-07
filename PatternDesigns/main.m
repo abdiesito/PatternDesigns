@@ -1,3 +1,4 @@
+
 #import <Foundation/Foundation.h>
 
 #import "Bridge/interface/Cappuccino.h"
@@ -43,7 +44,7 @@ int main(int argc, const char * argv[]) {
         orden.flavor = americano;
         [orden serve];
         
-        NSLog(@"\n==============================================");
+        NSLog(@"\n============================================================================================");
         
         WeatherSimulator *simulator = [[WeatherSimulator alloc] init];
 
