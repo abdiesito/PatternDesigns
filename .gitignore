@@ -1,0 +1,68 @@
+# ========================
+# Xcode + Objective-C
+# .gitignore estándar
+# ========================
+
+# ── Archivos de usuario (específicos de cada dev) ──
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# ── Datos de workspace que no deben compartirse ──
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+
+# ── Build ──
+build/
+DerivedData/
+*.o
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ── Archivos de Xcode temporales ──
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# ── Resultados de pruebas ──
+*.xcresult
+
+# ── CocoaPods (si usas pods) ──
+# Descomenta la siguiente línea si NO quieres subir los Pods
+# Pods/
+# Podfile.lock  ← ESTA línea se suele dejar comentada o incluida según tu equipo
+
+# ── Carthage ──
+Carthage/Build/
+
+# ── Swift Package Manager ──
+.build/
+.swiftpm/
+
+# ── macOS ──
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# ── Archivos de respaldo del editor ──
+*~
+*.swp
+*.swo
+
+# ── Archivos de entorno / secretos ──
+*.env
+Secrets.swift
+Config.xcconfig
+GoogleService-Info.plist
