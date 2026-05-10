@@ -15,6 +15,20 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
+        WeatherSimulator *simulator = [[WeatherSimulator alloc] init];
+
+        [simulator simulateWithIntensity:RainIntensityDrizzle dropCount:5];
+        [simulator simulateWithIntensity:RainIntensityStorm dropCount:5];
+        [simulator simulateWithIntensity:RainIntensityModerate dropCount:5];
+
+        NSLog(@"\n--- Segunda ronda (reutilizando flyweights) ---");
+        [simulator simulateWithIntensity:RainIntensityStorm dropCount:3];
+
+        NSLog(@"\n✔ Texturas únicas en RAM: %ld (sin importar cuántas gotas se renderizaron)",
+            (long)[RainDropFactory cachedTypesCount]);
+
+        NSLog(@"\n============================================================================================");
+
         id<CoffeeFlavorProtocol> cappuccino = [[Cappuccino alloc] init];
         id<CoffeeFlavorProtocol> moka = [[Moka alloc] init];
         id<CoffeeFlavorProtocol> americano  = [[Americano alloc] init];
@@ -44,19 +58,8 @@ int main(int argc, const char * argv[]) {
         orden.flavor = americano;
         [orden serve];
         
-        NSLog(@"\n============================================================================================");
         
-        WeatherSimulator *simulator = [[WeatherSimulator alloc] init];
-
-                [simulator simulateWithIntensity:RainIntensityDrizzle  dropCount:5];
-                [simulator simulateWithIntensity:RainIntensityStorm    dropCount:5];
-                [simulator simulateWithIntensity:RainIntensityModerate dropCount:5];
-
-                NSLog(@"\n--- Segunda ronda (reutilizando flyweights) ---");
-                [simulator simulateWithIntensity:RainIntensityStorm dropCount:3];
-
-                NSLog(@"\n✔ Texturas únicas en RAM: %ld (sin importar cuántas gotas se renderizaron)",
-                      (long)[RainDropFactory cachedTypesCount]);
+        
         
     }
     return 0;
