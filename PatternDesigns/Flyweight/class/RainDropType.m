@@ -9,8 +9,8 @@
     self = [super init];
     if (self) {
         _texture = texture;
-        _color   = color;
-        _size    = size;
+        _color = color;
+        _size = size;
     }
     return self;
 }
