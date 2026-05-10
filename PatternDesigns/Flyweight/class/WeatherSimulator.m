@@ -11,9 +11,9 @@ static const CGFloat kScreenHeight = 844.0;
 
     NSString *label;
     switch (intensity) {
-        case RainIntensityDrizzle:  label = @"Llovizna";  break;
-        case RainIntensityModerate: label = @"Moderada";  break;
-        case RainIntensityStorm:    label = @"Tormenta";  break;
+        case RainIntensityDrizzle: label = @"Llovizna"; break;
+        case RainIntensityModerate: label = @"Moderada"; break;
+        case RainIntensityStorm: label = @"Tormenta"; break;
     }
 
     NSLog(@"\n═══════════════════════════════════");
@@ -23,8 +23,8 @@ static const CGFloat kScreenHeight = 844.0;
     RainDropType *flyweight = [RainDropFactory dropForIntensity:intensity];
 
     for (NSInteger i = 0; i < count; i++) {
-        CGFloat x       = arc4random_uniform((uint32_t)kScreenWidth);
-        CGFloat y       = arc4random_uniform((uint32_t)kScreenHeight);
+        CGFloat x = arc4random_uniform((uint32_t)kScreenWidth);
+        CGFloat y = arc4random_uniform((uint32_t)kScreenHeight);
         CGFloat opacity = 0.4 + ((arc4random_uniform(60)) / 100.0);
 
         [flyweight renderAtX:x y:y opacity:opacity];
