@@ -11,7 +11,7 @@
 }
 
 - (void)brew {
-    NSLog(@"💧 Preparando espresso con agua caliente...");
+    NSLog(@"Preparando espresso con agua caliente...");
 }
 
 @end
