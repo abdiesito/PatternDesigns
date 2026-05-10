@@ -11,7 +11,7 @@
 }
 
 - (void)brew {
-    NSLog(@"☕ Preparando espresso con leche vaporizada...");
+    NSLog(@"Preparando espresso con leche vaporizada...");
 }
 
 @end
