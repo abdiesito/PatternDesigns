@@ -6,7 +6,7 @@
 
 @property (nonatomic, strong, readonly) NSString *texture;
 @property (nonatomic, strong, readonly) NSString *color;
-@property (nonatomic, assign, readonly) CGFloat   size;
+@property (nonatomic, assign, readonly) CGFloat size;
 
 - (instancetype)initWithTexture:(NSString *)texture
                           color:(NSString *)color
